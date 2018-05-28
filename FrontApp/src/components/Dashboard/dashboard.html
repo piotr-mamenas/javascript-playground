@@ -1,0 +1,18 @@
+<div>
+
+  <h1 class="mb-4">My awesome <img src="~assets/images/logo.png" height="36" alt=""> project</h1>
+  
+  <div v-show="posts.length" class="mb-4">
+    <transition-group
+      tag="div"
+      class="list-group"
+      :css="false"
+      @before-enter="handleBeforeEnter"
+      @enter="handleEnter">
+      <div v-for="card in cards">
+        {{ card.firstName }}
+      </div>
+    </transition-group>
+  </div>
+
+</div>
